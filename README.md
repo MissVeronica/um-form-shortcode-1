@@ -26,7 +26,7 @@ German example: "Neues Mitglied seit 2 Wochen" by using this parameter string: f
 French example: "Nouveau membre depuis 2 semaines" and this parameter string: format="Nouveau membre depuis %s"
 
 ### Installation
-Add this code snippet to your child-theme functions.php file or add to the “Code Snippets” plugin
+Add this code snippet to your child-theme functions.php file or add to the “Code Snippets” plugin (remove first line the <?php)
 
 ### Error messages
 Nothing is displayed by the shortcode if the meta_key value can't be used as a PHP formatted date/time or is not an UNIX integer timestamp
