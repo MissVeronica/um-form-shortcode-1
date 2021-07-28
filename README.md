@@ -28,6 +28,10 @@ French example: "Nouveau membre depuis 2 semaines" and this parameter string: fo
 ### Installation
 Add this code snippet to your child-theme functions.php file or add to the “Code Snippets” plugin
 
+### Error messages
+Nothing is displayed by the shortcode if the meta_key value can't be used as a PHP formatted date/time or is not a UNIX integer timestamp
+
+Missing meta_key parameter will display: Shortcode parameter error
 ### References
 https://developer.wordpress.org/reference/functions/human_time_diff/
 
