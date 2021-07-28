@@ -26,7 +26,7 @@ add_shortcode( 'my_human_time_diff', 'my_human_time_diff' );
                 if( isset( $atts['format'] )) $format = $atts['format'];
                 else $format = '%s ago';                
                 
-                return '<div>' . sprintf( $format, $time_diff ) . '</div>';
+                return '<div>' . esc_attr( sprintf( $format, $time_diff )) . '</div>';
 
             } else return '';
 
