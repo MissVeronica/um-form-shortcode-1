@@ -1,4 +1,4 @@
-
+<?php
 /*
 *       [my_human_time_diff meta_key="meta_key_time_name" format="My label text %s ago"]
 */
