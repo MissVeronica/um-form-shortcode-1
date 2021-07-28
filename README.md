@@ -14,9 +14,9 @@ The meta_key value may either be an UNIX time stamp or an user readable format l
 
 %s is replaced by the time difference to current time text returned by the WordPress function “human_time_diff”.
 
-format="%s ago" will give in the UM form the text like: 4 months ago
+The default string ( no format parameter used in the shortcode ) for format="%s ago" will give in the UM form the text like: 4 months ago
 
-format="New member since %s ago" and this form field display: New member since 2 weeks ago
+Any text string can be used like this format="New member since %s ago" and this form field display: New member since 2 weeks ago
 
 ### Local languages
 Seconds, minutes, hours, days, weeks, months and years are translated according to your WordPress site language setup and you can use your language in creating the format parameter for the shortcode
