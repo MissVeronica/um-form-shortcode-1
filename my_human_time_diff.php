@@ -1,4 +1,7 @@
 <?php
+
+// Version 2021 August 03
+
 /*
 *       [my_human_time_diff meta_key="meta_key_time_name" format="My label text %s ago"]
 */
@@ -8,7 +11,7 @@ add_shortcode( 'my_human_time_diff', 'my_human_time_diff' );
     function my_human_time_diff( $atts ) {
 
         if( is_array( $atts ) && isset( $atts['meta_key'] )) {
-             
+
             um_fetch_user( um_profile_id());
             $meta_value = um_user( $atts['meta_key'] );
 
@@ -26,7 +29,10 @@ add_shortcode( 'my_human_time_diff', 'my_human_time_diff' );
                 if( isset( $atts['format'] )) $format = $atts['format'];
                 else $format = '%s ago';                
                 
-                return '<div>' . esc_attr( sprintf( $format, $time_diff )) . '</div>';
+                $title = wp_date( get_option( 'date_format' ) . ' ' . get_option( 'time_format' ), $first_time );
+                if( !$title ) $title = 'Invalid first date';
+
+                return '<div title="' . esc_attr( $title ) . '">' . esc_attr( sprintf( $format, $time_diff )) . '</div>';
 
             } else return '';
 
